@@ -61,7 +61,7 @@ void display_desenho(){
 }
 
 
-// dois dígitos significativos * 10 do E24:
+// Dois dígitos significativos * 10 do E24:
 static const int e24_2dig[E24_SIZE] = {
     10,11,12,13,15,16,18,20,22,24,27,30,
     33,36,39,43,47,51,56,62,68,75,82,91
@@ -92,7 +92,7 @@ static const int dig_colors_rgb[10][3] = {
 };
 
 static const int mult_colors_rgb[12][3] = {
-    {38, 38, 38}, // prata
+    {38, 28, 18}, // prata
     {51, 23, 0}, // ouro
     {0, 0, 0}, // preto
     {35, 10, 4}, // marrom (não sai como esperado)
