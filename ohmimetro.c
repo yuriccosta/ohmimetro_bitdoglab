@@ -79,7 +79,7 @@ static const char *mult_colors[] = {
 };
 
 static const int dig_colors_rgb[10][3] = {
-    {0, 0, 0}, // preto
+    {0, 0, 0}, // preto (apagado)
     {35, 10, 4}, // marrom (não sai como esperado)
     {51, 0, 0}, // vermelho 
     {51, 10, 0}, // laranja
@@ -94,7 +94,7 @@ static const int dig_colors_rgb[10][3] = {
 static const int mult_colors_rgb[12][3] = {
     {38, 28, 18}, // prata
     {51, 23, 0}, // ouro
-    {0, 0, 0}, // preto
+    {0, 0, 0}, // preto (apagado)
     {35, 10, 4}, // marrom (não sai como esperado)
     {51, 0, 0}, // vermelho 
     {51, 10, 0}, // laranja
