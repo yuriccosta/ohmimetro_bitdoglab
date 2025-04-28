@@ -171,23 +171,8 @@ void calcular_faixa(double resistencia, char cor1[], char cor2[], char cor3[])
     strcpy(cor3, mult_colors[pot+2]);
 }
 
-// Trecho para modo BOOTSEL com botão B
-#include "pico/bootrom.h"
-#define botaoB 6
-void gpio_irq_handler(uint gpio, uint32_t events)
-{
-    reset_usb_boot(0, 0);
-}
 
-int main()
-{
-    // Para ser utilizado o modo BOOTSEL com botão B
-    gpio_init(botaoB);
-    gpio_set_dir(botaoB, GPIO_IN);
-    gpio_pull_up(botaoB);
-    gpio_set_irq_enabled_with_callback(botaoB, GPIO_IRQ_EDGE_FALL, true, &gpio_irq_handler);
-    // Aqui termina o trecho para modo BOOTSEL com botão B
-
+int main(){
     // I2C Initialisation. Using it at 400Khz.
     i2c_init(I2C_PORT, 400 * 1000);
 
@@ -221,8 +206,6 @@ int main()
 
     char faixa1[20] = "", faixa2[20] = "", faixa3[20] = "";
     char cor1[20] = "", cor2[20] = "", cor3[20] = "";
-
-    stdio_init_all();
 
     bool cor = true;
     while (true)
